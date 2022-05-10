@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="307dp"
+    android:layout_height="wrap_content"
+    android:background="@color/alert">
+
+    <Button
+        android:id="@+id/buttonAdet"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="20dp"
+        android:padding="0dp"
+        android:text="Adet olarak ekle"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAnewliz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDolar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonAnewliz"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="20dp"
+        android:padding="0dp"
+        android:text="Anewliz Sayfası"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonAdet"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDetay" />
+
+    <Button
+        android:id="@+id/buttonDolar"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="45dp"
+        android:padding="0dp"
+        android:text="Dolar olarak ekle"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAdet"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDetay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDegerGir" />
+
+    <EditText
+        android:id="@+id/editTextCuzdanEkle"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Cüzdana Ekle"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColor="#131010"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDegerGir"
+        app:layout_constraintEnd_toStartOf="@+id/aSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDetay"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="11dp"
+        android:padding="0dp"
+        android:text="Detay"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAnewliz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonDolar"
+        app:layout_constraintTop_toBottomOf="@+id/aSwitch" />
+
+    <Switch
+        android:id="@+id/aSwitch"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:text="Farklı fiyat"
+        android:textColorHighlight="#ED2020"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextCuzdanEkle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDegerGir"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Değer Gir"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColor="#131010"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDetay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCuzdanEkle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_Name"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="35dp"
+        android:radius="10dp"
+        android:text="TextView"
+
+        android:textColor="@color/Sembol"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="28dp"
+        android:gravity="center"
+        android:paddingVertical="2dp"
+        android:paddingLeft="10dp"
+        android:text="TextView"
+        android:textColor="@color/Degisim"
+        android:textSize="18sp"
+        app:layout_constraintCircleRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Price"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="56dp"
+        android:text="TextView"
+        android:textColor="@color/Deger"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Perc"
+        app:layout_constraintStart_toEndOf="@+id/textView_Name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewKripto"
+        android:layout_width="29dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Perc"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

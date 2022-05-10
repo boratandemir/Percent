@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="307dp"
+    android:layout_height="wrap_content"
+    android:background="@color/alert">
+
+    <Button
+        android:id="@+id/buttonAdetHisse"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="20dp"
+        android:padding="0dp"
+        android:text="Adet olarak ekle"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAnewlizHisse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDolarHisse" />
+
+    <Button
+        android:id="@+id/buttonAnewlizHisse"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="20dp"
+        android:padding="0dp"
+        android:text="Anewliz Sayfası"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonAdetHisse"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDetayHisse" />
+
+    <Button
+        android:id="@+id/buttonDolarHisse"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="11dp"
+        android:padding="0dp"
+        android:text="Dolar olarak ekle"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAdetHisse"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDetayHisse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDegerGirHisse" />
+
+    <EditText
+        android:id="@+id/editTextCuzdanEkleHisse"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Cüzdana Ekle"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColor="#131010"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDegerGirHisse"
+        app:layout_constraintEnd_toStartOf="@+id/aSwitchHisse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDetayHisse"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="11dp"
+        android:padding="0dp"
+        android:text="Detay"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAnewlizHisse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonDolarHisse"
+        app:layout_constraintTop_toBottomOf="@+id/aSwitchHisse" />
+
+    <Switch
+        android:id="@+id/aSwitchHisse"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="32dp"
+        android:text="Farklı fiyat"
+        android:textColorHighlight="#ED2020"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDetayHisse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextCuzdanEkleHisse"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDegerGirHisse"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="Değer Gir"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textColor="#131010"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDolarHisse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCuzdanEkleHisse" />
+</androidx.constraintlayout.widget.ConstraintLayout>

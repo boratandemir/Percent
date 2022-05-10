@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#D31010</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="alert">#FFFFFFFF</color>
+    <color name="kuto">#DA610861</color>
+    <color name="bar">#00003F</color>
+
+    <color name="coinDetay">#F2F3F4</color>
+    <color name="coinDetaytext">#201D04</color>
+    <color name="cuzdanBaslik">#000000</color>
+
+    <color name="Deger">#000000</color>
+    <color name="Degisim">#000000</color>
+    <color name="Sembol">#000000</color>
+
+    <color name="cuzdan_fragment_arkaplan">#FFFFFF</color>
+    <color name="cuzdan_fragment_kripto_rc_arkaplan">#57F3F0F0</color>
+    <color name="cuzdan_fragment_kripto_baslik">#302F2F</color>
+    <color name="button_colors">#93CAF6</color>
+    <color name="siyahbeyaz">#000000</color>
+    <color name="siyahbeyaz2">#ffffff</color>
+</resources>

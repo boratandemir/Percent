@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/kripto_nav_button"
+        android:icon="@drawable/kripto_mq"
+        android:title="Kripto" />
+    <item
+        android:id="@+id/doviz_hisse_nav_button"
+        android:icon="@drawable/doviz_hisse_24"
+        android:title="Döviz/Hisse" />
+    <item
+        android:id="@+id/hesaplama_nav_button"
+        android:icon="@drawable/ic_baseline_calculate_24"
+        android:title="Hesaplama" />
+    <item
+        android:id="@+id/varliklar_nav_button"
+        android:icon="@drawable/dolar_mq"
+        android:title="Varlıklar" />
+</menu>

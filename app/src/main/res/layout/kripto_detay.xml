@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".model.kriptoModel.CoinPage">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/Deger"
+        android:gravity="center"
+        android:text="name"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/Deger"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Deger"
+        android:gravity="center"
+        android:text="price"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/Deger"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/Deger"
+        android:gravity="center"
+        android:text="date"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="@color/Deger"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraitDetay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/volume24h"
+                app:layout_constraintTop_toBottomOf="@+id/volume24h">
+
+
+                <TextView
+                    android:id="@+id/symbolData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Sembol"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Sembol"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+
+                <TextView
+                    android:id="@+id/slug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="İsmi"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/symbol"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+
+                <TextView
+                    android:id="@+id/slugData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="İsmi"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/symbolData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/volume24h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Günlük Hacim"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/slug"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/volume24hData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Günlük Hacim"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/slugData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/circulating_supply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="9dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Dolaşımdaki Miktar"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/volume24h"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+
+                <TextView
+                    android:id="@+id/circulating_supplyData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Dolaşımdaki Miktar"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/volume24hData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/max_supply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Üst Sınır"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/circulating_supply"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/max_supplyData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Üst Sınır"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/circulating_supplyData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/market_cap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Market Cap"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/max_supply"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+
+                <TextView
+                    android:id="@+id/market_capData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="market_cap"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/max_supplyData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/change1h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Saatlik Değişim"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/market_cap"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+
+                <TextView
+                    android:id="@+id/change1hData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Saatlik Değişim"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/market_capData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/change24h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Günlük Değişim"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/change1h"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/change24hData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="#F3F2F4"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Günlük Değişim"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/change1hData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/change7d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Haftalık Değişim"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+                <TextView
+                    android:id="@+id/change7dData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/coinDetay"
+                    android:backgroundTint="@color/coinDetay"
+                    android:padding="10dp"
+                    android:text="Haftalık Değişim"
+                    android:textAlignment="textEnd"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/siyahbeyaz"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/change24hData"
+                    tools:layout_conversion_absoluteHeight="45dp"
+                    tools:layout_conversion_absoluteWidth="383dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

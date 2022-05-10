@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cuzdan_fragment_arkaplan">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="9dp"
+        android:text="Cüzdandaki Hisseleriniz"
+        android:textColor="@color/cuzdan_fragment_kripto_baslik"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutHisse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swipeCuzdanKripto"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHisse"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="364dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewHisseDegeriAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="DEĞERİ"
+            android:textColor="@color/cuzdan_fragment_kripto_baslik"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewHisseAlisFiyatiAdapter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewHisseAlisFiyatiAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="7dp"
+            android:gravity="center"
+            android:text="ALIŞ FİYATI"
+            android:textColor="@color/cuzdan_fragment_kripto_baslik"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewHisseAdediAdapter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewHisseAdediAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="ADET"
+            android:textColor="@color/cuzdan_fragment_kripto_baslik"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewHisseDegisimAdapter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewHisseAdiAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="ADI"
+            android:textColor="@color/cuzdan_fragment_kripto_baslik"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewHisseDegisimAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="DEĞİŞİM YÜZDESİ"
+            android:textColor="@color/cuzdan_fragment_kripto_baslik"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeCuzdanHisse"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutHisse">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cuzdan_recycler_view_hisse"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@color/cuzdan_fragment_kripto_rc_arkaplan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.872" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Cüzdandaki Kripto Paralarınız"
+        android:textAlignment="center"
+        android:textColor="@color/cuzdan_fragment_kripto_baslik"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeCuzdanKripto"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutKripto">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cuzdan_recycler_view_cripto"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:layout_marginTop="108dp"
+            android:background="@color/cuzdan_fragment_kripto_rc_arkaplan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutKripto"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewCoinDegeriAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="DEĞERİ"
+            android:textColor="@color/cuzdanBaslik"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCoinAlisFiyatiAdapter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCoinAlisFiyatiAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="7dp"
+            android:gravity="center"
+            android:text="ALIŞ FİYATI"
+            android:textColor="@color/cuzdanBaslik"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCoinAdediAdapter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCoinAdediAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="ADET"
+            android:textColor="@color/cuzdanBaslik"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCoinDegisimAdapter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCoinAdiAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="ADI"
+            android:textColor="@color/cuzdanBaslik"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCoinDegisimAdapter"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="DEĞİŞİM YÜZDESİ"
+            android:textColor="@color/cuzdanBaslik"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
